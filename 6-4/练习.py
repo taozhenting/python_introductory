@@ -6,12 +6,14 @@ peoples = [tao,wei,yuan]
 for people in peoples:
     print(people)
 
+#宠物
 mimi = {'cat':'weiyun'}
 wangwang = {'dog':'taozhenting'}
 pets = [mimi,wangwang]
 for pet in pets:
     print(pets)
 
+#喜欢的地方
 favorite_places = {
     'tao':['japan','america','iceland'],
     'wei':['japan'],
@@ -26,6 +28,7 @@ for name,places in favorite_places.items():
     for place in places:
         print(place)
 
+#喜欢的数字
 numbers = {
     'tom':['3','6','8'],
     'alex':'5',
@@ -41,3 +44,53 @@ for name,number in numbers.items():
     )
     for nu in number:
         print(nu)
+
+#城市
+cities = {
+    '上海':{
+        'country':'中国',
+        'population':'2000万',
+        'fact':'商业城市'
+    },
+    '札幌':{
+        'country':'日本',
+        'population':'194万',
+        'fact':'旅游城市'
+    },
+    '北京':{
+        'country':'中国',
+        'population':'2170万',
+        'fact':'行政城市'
+    }
+}
+
+for name,city_info in cities.items():
+    print(
+        name +
+        "的国家:" +
+        city_info['country'] +
+        ", 人口:" +
+        city_info['population'] +
+        ", 属于:" +
+        city_info['fact'] +
+        "."
+    )
+
+#扩展
+cities['香港'] = {
+    'country':'中国',
+    'population':'740万',
+    'fact':'自由城市'
+}
+
+for name,city_info in cities.items():
+    print(
+        name +
+        "的国家:" +
+        city_info['country'] +
+        ", 人口:" +
+        city_info['population'] +
+        ", 属于:" +
+        city_info['fact'] +
+        "."
+    )
