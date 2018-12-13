@@ -35,22 +35,20 @@ class Restaurant():
     def increment_number_served(self,served):
         self.number_served += served
 
+class IceCreamStand(Restaurant):
+    """冰激凌小店"""
+    def __init__(self,restaurant_name,cuisine_type,flavors):
+        super().__init__(restaurant_name,cuisine_type)
+        self.flavors = flavors
+    def read_icecreamstand(self):
+        print(
+            "\n冰激凌口味有:"
+        )
+        for self.flavor in self.flavors:
+            print(self.flavor)
 
-#创建restaurant实例
-restaurant = Restaurant('必胜客','西餐')
-#调用describe_restaurant方法
-restaurant.describe_restaurant()
-#调用open_restaurant方法
-restaurant.open_restaurant()
-#直接修改number_sered属性的值（用餐人数）
-restaurant.number_served=23
-#调用read_number_served方法，查看多少人用餐
-restaurant.read_number_served()
-#通过set_number_served方法，设置就餐人数
-restaurant.set_number_served(20)
-#调用read_number_served方法，查看多少人用餐
-restaurant.read_number_served()
-#调用increment_number_served方法，递增就餐人数
-restaurant.increment_number_served(50)
-restaurant.read_number_served()
-#餐厅最大人数60人，超过就会警告。
+IceCreamStand = IceCreamStand('旋风桃子冰激凌','冰激凌小店',['草莓味','香草味','巧克力味'])
+IceCreamStand.describe_restaurant()
+IceCreamStand.read_icecreamstand()
+IceCreamStand.increment_number_served(10)
+IceCreamStand.read_number_served()
